@@ -43,6 +43,8 @@ public class PessoaControllerRest {
         }
         return new ResponseEntity<>(HttpStatus.OK);
     }    
+    
+    //teste
 
     @RequestMapping(method = RequestMethod.GET, value = "/pessoas", 
             produces = MediaType.APPLICATION_JSON_VALUE)
