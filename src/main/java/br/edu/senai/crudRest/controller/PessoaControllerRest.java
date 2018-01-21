@@ -45,7 +45,7 @@ public class PessoaControllerRest {
     }    
     
     //teste
-    //outro teste
+    //outro teste 22
 
     @RequestMapping(method = RequestMethod.GET, value = "/pessoas", 
             produces = MediaType.APPLICATION_JSON_VALUE)
