@@ -24,6 +24,7 @@ public class PessoaDao {
         pessoaRep.delete(pessoa.getId());
     }
     
+    //teste no dao
     public Collection<Pessoa> retornaTodas() {
         return pessoaRep.findAll();
     }
