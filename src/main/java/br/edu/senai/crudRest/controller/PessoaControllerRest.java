@@ -44,9 +44,6 @@ public class PessoaControllerRest {
         return new ResponseEntity<>(HttpStatus.OK);
     }    
     
-    //teste
-    //outro teste 22
-
     @RequestMapping(method = RequestMethod.GET, value = "/pessoas", 
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Collection<Pessoa>> listarPessoas() {
