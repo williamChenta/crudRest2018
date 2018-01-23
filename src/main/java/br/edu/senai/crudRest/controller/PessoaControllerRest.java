@@ -2,6 +2,7 @@ package br.edu.senai.crudRest.controller;
 
 import br.edu.senai.crudRest.repository.PessoaDao;
 import br.edu.senai.crudRest.model.Pessoa;
+import java.util.Arrays;
 import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -43,10 +44,13 @@ public class PessoaControllerRest {
         }
         return new ResponseEntity<>(HttpStatus.OK);
     }    
-    
-    @RequestMapping(method = RequestMethod.GET, value = "/pessoas", 
+        
+    @RequestMapping(method = RequestMethod.GET, value = "/pessoas/{id}", 
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Collection<Pessoa>> listarPessoas() {
+    public ResponseEntity<Collection<Pessoa>> listarPessoas(@PathVariable Integer id) {        
+        if(id > 0) {
+            return new ResponseEntity<>(Arrays.asList(pdao.buscarPorId(id)), HttpStatus.OK);
+        }        
         return new ResponseEntity<>(pdao.retornaTodas(), HttpStatus.OK);
     }
 }
