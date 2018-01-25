@@ -15,6 +15,9 @@ public class Pessoa {
     @Column
     private String email;
 
+    @Column
+    private String sexo;
+
     public Integer getId() {
         return id;
     }
@@ -37,5 +40,13 @@ public class Pessoa {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 }
